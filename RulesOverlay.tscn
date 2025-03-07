@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfs1fmfla363j"]
+
+[ext_resource type="Script" path="res://RulesOverlay.gd" id="1_rules"]
+
+[node name="RulesOverlay" type="Node2D"]
+script = ExtResource("1_rules")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+
+[node name="RulesLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "Game Rules Text Here"
+
+[node name="ContinueLabel" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -30.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press any key to continue..."
+horizontal_alignment = 1

@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4nrbhohihgu0"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_un12u"]
+[ext_resource type="Texture2D" uid="uid://da0x2ut6srskm" path="res://mat.jpeg" id="3_0yrxt"]
+[ext_resource type="Script" path="res://DiscardPile.gd" id="4_0hglv"]
+[ext_resource type="PackedScene" uid="uid://byka7j1460a7y" path="res://Deck.tscn" id="4_1fvx6"]
+[ext_resource type="PackedScene" uid="uid://b354jqwgr84fq" path="res://DiscardPile.tscn" id="4_6g640"]
+[ext_resource type="PackedScene" uid="uid://b3nwa8n6adn6m" path="res://RunButton.tscn" id="6_fntpi"]
+[ext_resource type="Script" path="res://Run.gd" id="6_pr38l"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_un12u")
+
+[node name="Floor" type="Sprite2D" parent="."]
+scale = Vector2(2, 1.8)
+texture = ExtResource("3_0yrxt")
+centered = false
+
+[node name="Deck" parent="." instance=ExtResource("4_1fvx6")]
+position = Vector2(75, 75)
+
+[node name="DiscardPile" parent="." instance=ExtResource("4_6g640")]
+position = Vector2(950, 400)
+script = ExtResource("4_0hglv")
+
+[node name="Health" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 527.0
+offset_right = 94.0
+offset_bottom = 550.0
+grow_vertical = 0
+scale = Vector2(3, 3)
+text = "20"
+
+[node name="RunButton" parent="." instance=ExtResource("6_fntpi")]
+script = ExtResource("6_pr38l")

@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1gv0of1o7xrh"]
+
+[ext_resource type="Script" path="res://GameMenu.gd" id="1_menu"]
+
+[node name="GameMenu" type="Node2D"]
+script = ExtResource("1_menu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 204.0
+offset_bottom = 284.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[font_size=50][center]SCOUNDREL[/center][/font_size]"
+fit_content = true
+
+[node name="HeaderLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 274.0
+offset_bottom = 354.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[font_size=3
+0][center]The 52-Card Dungeon Crawler[/center][/font_size]"
+fit_content = true
+
+[node name="StartButton" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 50.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "START GAME"

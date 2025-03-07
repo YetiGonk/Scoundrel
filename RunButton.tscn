@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b3nwa8n6adn6m"]
+
+[node name="RunButton" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 954.0
+offset_top = 149.0
+offset_right = 1030.0
+offset_bottom = 189.0
+
+[node name="RunButton" type="Button" parent="PanelContainer"]
+layout_mode = 2
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[font_size=25][center][shake]RUN[/shake][/center]"
+scroll_active = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
